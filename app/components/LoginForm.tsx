@@ -24,10 +24,9 @@ export default function SignIn() {
       password,
     });
 
-    setLoading(false);
-
     if (result?.error) {
         setError('Invalid credentials');
+	setLoading(false);
       } else {
         // Redirect to the blog page upon successful login
         router.push('/blog');
